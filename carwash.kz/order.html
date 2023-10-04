@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CarWash</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Roboto:400,500&amp;subset=cyrillic"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/jquery.formstyler.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+ <title> Order</title>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__contacts">
+          <a class="header__phone text-white" href="tel:77000007117">+7 (700) 000 71 17</a>
+          <a class="header__email text-white">carwash@gmail.com</a>
+          <a class="header__btn text-dark" href="signin.html">Sign in/Sign up</a>
+        </div>
+      </div>
+    </div>
+    <div class="header__content">
+      <div class="container">
+        <div class="header__content-inner">
+         
+          <nav class="menu">
+            <div class="header__btn-menu">
+              <span class="icon-bars"></span>
+            </div>
+            <ul>
+              <li><a href="index.html">Main</a></li>
+              <li><a href="index.html#categories">Categories</a></li>
+              <li><a href="contacts.html">Contacts</a></li>
+              <li><a href="order.html">Order</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div style="margin-left: 635px;">
+          <div class="form__box">
+            <table>
+              <form class="container" action="index.html" method="POST">
+
+              <div class="form__box-inner">
+                <div class="form__box-left">
+
+                  <label>
+                    Name
+                    <input type="text" class="container form-control" name="name">
+                  </label>
+
+                  <label>
+                    Surname
+                    <input type="text" class="container mt-2 form-control" name="surname">
+                  </label>
+
+                  <label>
+                    Phone number
+                    <input type="text" class="container mt-2 form-control" name="number">
+                  </label>
+
+                  <label>
+                    Category
+                    <input type="text" class="container mt-2 form-control" name="type">
+                  </label>
+                  
+                      <button class="default-btn" style="width: 259px;" type="submit">Order</button>
+                      <p align="left" class=" container mt-1 mb-3 text-dark"><a class="text-dark" href="index.html"> Back</a></p>
+                </div>
+              </form>
+            </table>
+            </div>
+          </div>
+        </div>
+
+</body>
+</html>
