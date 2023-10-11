@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="img/itstore.png" />
+        <title>itStore · Main</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+    <body>
+        <div>
+            <div w3-include-html="header.html"></div>
+           <div id="bannerImage">
+               <div class="container">
+                   <center>
+                   <div id="bannerContent">
+                       <h1>Electronics store</h1>
+                       <p>40 % discount for all premium products</p>
+                       <a href="products.html" class="btn btn-danger">Do purchases right here</a>
+                   </div>
+                   </center>
+               </div>
+           </div>
+           <div class="container">
+               <div class="row">
+                   <div class="col-xs-4">
+                       <div  class="thumbnail">
+                           <a href="products.html">
+                                <img src="https://www.canon.com.au/-/media/images/canon/products/mirrorless-cameras/eos-r5-temp/tile-image-eosr5-1200x1200.ashx?mw=1200&hash=D6E43B947B880336BEDF0ED8C29FA0BC" alt="Camera">
+                           </a>
+                           <center>
+                                <div class="caption">
+                                        <p id="autoResize">Photoapparats</p>
+                                        <p>Choose from all best</p>
+                                </div>
+                           </center>
+                       </div>
+                   </div>
+                   <div class="col-xs-4">
+                       <div class="thumbnail">
+                           <a href="products.html">
+                               <img src="https://cdn.shopify.com/s/files/1/0573/2309/4216/products/LosAngeles_SandGold_001.png?v=1650876856" alt="Watch">
+                           </a>
+                           <center>
+                                <div class="caption">
+                                    <p id="autoResize">Headphones</p>
+                                    <p>Original headphones from all best brands</p>
+                                </div>
+                           </center>
+                       </div>
+                   </div>
+                   <div class="col-xs-4">
+                       <div class="thumbnail">
+                           <a href="products.html">
+                               <img src="https://api.technodom.kz/f3/api/v1/images/230872_1.jpg" alt="Shirt">
+                           </a>
+                           <center>
+                               <div class="caption">
+                                   <p id="autoResize">Laptops</p>
+                                   <p>Our incrediblle collection of laptops</p>
+                               </div>
+                           </center>
+                       </div>
+                   </div>
+               </div>
+           </div>
+            <br><br> <br><br><br><br>
+            <div w3-include-html="footer.html"></div>
+        </div>
+    </body>
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /* Loop through a collection of all HTML elements: */
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /* Make an HTTP request using the attribute value as the file name: */
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /* Remove the attribute, and call this function once more: */
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              }
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /* Exit the function: */
+              return;
+            }
+          }
+        }
+        </script>
+    <script>
+        includeHTML();
+    </script>
+    <script type="text/javascript" src="bootstrap/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</html>

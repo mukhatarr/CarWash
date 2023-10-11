@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="img/itstore.png" />
+        <title>itStore · Корзина</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+        <script type="text/javascript" src="bootstrap/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+    <body>
+        <div>
+            <div w3-include-html="header.html"></div>
+            <br>
+            <div class="container">
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th>Номер товара:</th><th>Название товара:</th><th>Цена:</th><th></th>
+                        </tr>
+                        <!--  -->       
+                        <tr>
+                            <th><?html echo $counter ?></th><th> SOMETHING </th><th> SOMETHING ₸</th>
+                            <th><a href='cart_remove.html?id=SOMETHING'>Убрать из корзины</a></th>
+                        </tr>
+                        <!--  -->
+                        <tr>
+                            <th></th><th>Общая сумма: </th><th><?html echo $sum;?> ₸</th><th><a href="success.html?id=<?html echo $user_id?>" class="btn btn-primary">Подтвердить заказ</a></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br>
+            <div w3-include-html="footer.html"></div>
+        </div>
+    </body>
+</html>
